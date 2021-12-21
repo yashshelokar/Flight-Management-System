@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import flightService from '../services/FlightService'
+import flightService from '../services/FlightServices'
 
 class ListFlightComponent extends Component {
     constructor(props) {

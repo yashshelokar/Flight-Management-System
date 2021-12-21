@@ -15,7 +15,7 @@ function App() {
         <Router>
               <HeaderComponent />
                 <div className="container">
-                    <Switch> 
+                    <Switch>
                           <Route path = "/" exact component = {ListFlightComponent}></Route>
                           <Route path = "/Flights" component = {ListFlightComponent}></Route>
                           <Route path = "/add-Flight/:id" component = {CreateFlightComponent}></Route>

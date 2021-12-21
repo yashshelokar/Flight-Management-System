@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import FlightService from '../services/FlightService';
+import FlightService from '../services/FlightServices';
 
 class CreateFlightComponent extends Component {
     constructor(props) {
@@ -25,7 +25,7 @@ class CreateFlightComponent extends Component {
             return
         }else{
             FlightService.getFlightById(this.state.id).then( (res) =>{
-                let flight = res.data;
+                let Flight = res.data;
                 this.setState({ArrivalTime: Flight.ArrivalTime,
                     DepartureTime: Flight.DepartureTime,
                     GateNo : Flight.GateNo
@@ -35,8 +35,8 @@ class CreateFlightComponent extends Component {
     }
     saveOrUpdateFlight = (e) => {
         e.preventDefault();
-        let flight = {ArrivalTime: this.state.ArrivalTime, DepartureTime: this.state.DepartureTime, GateNo: this.state.GateNo};
-        console.log('flight => ' + JSON.stringify(Flight));
+        let Flight = {ArrivalTime: this.state.ArrivalTime, DepartureTime: this.state.DepartureTime, GateNo: this.state.GateNo};
+        console.log('Flight => ' + JSON.stringify(Flight));
 
         // step 5
         if(this.state.id === '_add'){
@@ -114,4 +114,4 @@ class CreateFlightComponent extends Component {
     }
 }
 
-export default createFlightComponent
+export default CreateFlightComponent
